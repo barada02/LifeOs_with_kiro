@@ -23,7 +23,12 @@
   - Configure Vite for development server on port 5173
   - _Requirements: 1.1, 1.4_
 
-- [ ] 3. Set up FastAPI backend with virtual environment
+- [x] 3. Set up FastAPI backend with virtual environment
+
+
+
+
+
   - Create Python virtual environment in backend directory
   - Initialize FastAPI project with main.py and basic app structure
   - Install required dependencies (FastAPI, SQLAlchemy, Uvicorn, Pydantic)
