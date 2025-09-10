@@ -3,6 +3,7 @@ from fastapi.middleware.cors import CORSMiddleware
 import uvicorn
 from app.database import get_database, test_connection, init_database
 from app.models.user import User
+from app.routers import auth
 
 # Create FastAPI app instance
 app = FastAPI(
@@ -19,6 +20,9 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+# Include authentication router
+app.include_router(auth.router)
 
 @app.get("/")
 async def root():

@@ -50,7 +50,12 @@
   - Test database connection and basic operations
   - _Requirements: 2.1, 2.2, 2.3_
 
-- [ ] 5. Implement backend authentication endpoints
+- [x] 5. Implement backend authentication endpoints
+
+
+
+
+
   - Create Pydantic models for user registration and login requests/responses
   - Implement user registration endpoint with password hashing
   - Implement user login endpoint with authentication
@@ -59,6 +64,7 @@
   - _Requirements: 4.2, 4.3, 4.6_
 
 - [ ] 6. Create health check endpoint and test database connectivity
+  - check if not don yet . otherwise don't repeat
   - Implement /api/health endpoint to verify backend and database status
   - Test database CRUD operations through API endpoints
   - Verify error handling for database connection issues
