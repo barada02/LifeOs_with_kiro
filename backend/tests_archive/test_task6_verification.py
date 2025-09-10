@@ -1,6 +1,7 @@
 """
 Task 6 Verification: Create health check endpoint and test database connectivity
 This test verifies all requirements for task 6 are implemented correctly.
+ARCHIVED: One-time verification test for Task 6 completion
 """
 import sys
 import os
@@ -10,7 +11,7 @@ import subprocess
 from threading import Thread
 
 # Add the backend directory to Python path
-sys.path.append(os.path.dirname(__file__))
+sys.path.append(os.path.dirname(os.path.dirname(__file__)))
 
 from app.database import test_connection, SessionLocal
 from app.database_init import initialize_database

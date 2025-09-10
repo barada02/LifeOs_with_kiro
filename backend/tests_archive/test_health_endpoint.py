@@ -1,6 +1,7 @@
 """
 Test script specifically for health check endpoint and database connectivity
 Tests various scenarios including database connection failures
+ARCHIVED: One-time comprehensive test for health endpoint functionality
 """
 import requests
 import json
@@ -11,7 +12,7 @@ import subprocess
 from threading import Thread
 
 # Add the backend directory to Python path
-sys.path.append(os.path.dirname(__file__))
+sys.path.append(os.path.dirname(os.path.dirname(__file__)))
 
 from app.database import test_connection, SessionLocal, engine
 from app.database_init import initialize_database

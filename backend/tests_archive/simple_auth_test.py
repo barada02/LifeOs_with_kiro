@@ -1,11 +1,17 @@
 """
 Simple authentication test without TestClient
+ARCHIVED: One-time test for authentication functionality verification
 """
 from app.database import SessionLocal, init_database
 from app.models.user import User
 from app.services.auth import AuthService
 from app.schemas.auth import UserCreate
 import json
+import sys
+import os
+
+# Add the backend directory to Python path
+sys.path.append(os.path.dirname(os.path.dirname(__file__)))
 
 
 def test_auth_functionality():

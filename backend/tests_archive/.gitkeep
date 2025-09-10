@@ -1,0 +1,26 @@
+# Tests Archive
+
+This folder contains one-time test files that were created for specific task verification and are kept for reference.
+
+## Archived Test Files
+
+- `test_task6_verification.py` - Comprehensive verification test for Task 6 (health check endpoint and database connectivity)
+- `test_health_endpoint.py` - Detailed health endpoint testing with various scenarios
+- `test_database_error_handling.py` - Database error handling verification tests
+- `simple_auth_test.py` - Direct authentication functionality testing without TestClient
+
+## Purpose
+
+These tests were created to verify specific implementation requirements and are archived to:
+1. Keep the main backend directory clean and organized
+2. Preserve test code for future reference
+3. Maintain a record of verification steps taken during development
+
+## Usage
+
+To run any archived test, navigate to the backend directory and run:
+```bash
+python tests_archive/[test_file_name].py
+```
+
+Note: Some tests may require adjusting import paths or starting the server manually.

@@ -1,5 +1,6 @@
 """
 Test database error handling scenarios
+ARCHIVED: One-time test for database error handling verification
 """
 import os
 import sys
@@ -7,7 +8,7 @@ import requests
 import time
 
 # Add the backend directory to Python path
-sys.path.append(os.path.dirname(__file__))
+sys.path.append(os.path.dirname(os.path.dirname(__file__)))
 
 from app.database import test_connection
 
