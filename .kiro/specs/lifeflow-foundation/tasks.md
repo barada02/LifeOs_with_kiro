@@ -36,7 +36,13 @@
   - Configure FastAPI to run on port 8000 with CORS for frontend communication
   - _Requirements: 1.2, 1.5_
 
-- [ ] 4. Create database schema and SQLAlchemy setup
+- [x] 4. Create database schema and SQLAlchemy setup
+
+
+
+
+
+
   - Create schema.sql file with users table definition
   - Set up SQLAlchemy database configuration and connection
   - Create User model with SQLAlchemy ORM

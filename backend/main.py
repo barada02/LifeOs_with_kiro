@@ -1,6 +1,8 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, Depends
 from fastapi.middleware.cors import CORSMiddleware
 import uvicorn
+from app.database import get_database, test_connection, init_database
+from app.models.user import User
 
 # Create FastAPI app instance
 app = FastAPI(
@@ -25,8 +27,20 @@ async def root():
 
 @app.get("/api/health")
 async def health_check():
-    """Health check endpoint"""
-    return {"status": "healthy", "service": "lifeos-api"}
+    """Health check endpoint with database connectivity check"""
+    db_status = "connected" if test_connection() else "disconnected"
+    return {
+        "status": "healthy", 
+        "service": "lifeos-api",
+        "database": db_status
+    }
+
+@app.on_event("startup")
+async def startup_event():
+    """Initialize database on application startup"""
+    print("Initializing database...")
+    init_database()
+    print("Database initialization complete!")
 
 if __name__ == "__main__":
     print("Starting LifeOS API server...")
